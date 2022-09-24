@@ -1,0 +1,10 @@
+#задание 1
+
+import json
+
+with open('purchase_log.txt') as f:
+    for line in f:
+        line = line.strip()
+        
+        data = json.loads(line)
+        print(data['user_id'], data['category'])
